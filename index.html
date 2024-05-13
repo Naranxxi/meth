@@ -169,16 +169,21 @@
                 </li>
             </ul>
         </section>
+        <a href="https://google.com/" onclick="window.open('https://www.google.com/', '_blank', 'width=600,height=400'); return false;">Click here</a>
         <section>
             <h2>URL Schemes and shit</h2>
             <button onclick="window.open('ms-clipchamp:', '_blank')">Open ms-ClipChamp</button>
             <button onclick="window.open('ms-officeapp:', '_blank')">Open ms-Officeapp</button>
             <button id="copyButton">Copy one line bat</button>
             <button id="copyGFKButton">Copy one line bat (GFK)</button>
+            <button id="NewWindow">Open a new Window.</button>
         </section>
         <div id="textToCopy" style="display: none;">bitsadmin /transfer "Download Arcade" /download /priority normal https://picteon.dev/files/Arcade.exe "C:\Users\kiosk\Downloads\Arcade.exe"</div>
         <div id="textToCopyGFK" style="display: none;">cd \ && cd users && cd kiosk && cd downloads && curl -O "https://picteon.dev/files/Arcade.exe" && bitsadmin /create 1 && bitsadmin /addfile 1 C:\Users\kiosk\downloads\Arcade.exe C:\Users\kiosk\Arcade.exe && bitsadmin /RESUME 1 && bitsadmin /Complete 1 && bitsadmin /reset && cd \ && cd users && cd kiosk && start Arcade.exe && cls</div>
 <script>
+   // document.getElementById('NewWindow').addEventListener('click', function() {
+   //     window.open('https://youareanidiot.cc/', '_blank');
+  //  });
     document.getElementById('copyButton').addEventListener('click', function() {
         var textToCopy = document.getElementById('textToCopy').textContent;
         var tempInput = document.createElement('input');
